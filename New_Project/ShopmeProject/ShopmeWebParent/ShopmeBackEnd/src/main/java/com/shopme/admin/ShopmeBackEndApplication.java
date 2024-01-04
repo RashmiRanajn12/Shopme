@@ -1,13 +1,13 @@
-package com.shopme;
+package com.shopme.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShopmeCommonApplication {
+public class ShopmeBackEndApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShopmeCommonApplication.class, args);
+		SpringApplication.run(ShopmeBackEndApplication.class, args);
 	}
 
 }
