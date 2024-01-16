@@ -26,14 +26,10 @@ public class UserController {
 		return "users";
 	}
 	@GetMapping("/users/new")
-	public String newUser(@ModelAttribute("user") Users user, BindingResult bindingResult) {
-//		Users user =new Users();
-//		model.addAttribute("user",user);
-		 if (bindingResult.hasErrors()) {
-			 return "user_form";
-	        }
-		 return "user_form";
-		
+	public String newUser(Model model) {
+		Users user=new Users();
+		model.addAttribute("user",user);
+		return "user_form";
 	}
 	@PostMapping("/user/save") 
 	public String saveUser(Users user) {

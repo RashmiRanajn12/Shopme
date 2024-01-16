@@ -19,7 +19,7 @@ public class Users {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(length = 25, nullable = false, unique = true)
+	@Column(length = 128, nullable = false, unique = true)
 	private String email;
 	@Column(name = "first_name", length = 25, nullable = false)
 	private String firstName;
@@ -98,6 +98,8 @@ public class Users {
 		this.lastName = lastName;
 		this.password = password;
 	}
+	
+	
 
 	public Set<Role> getRoles() {
 		return roles;
@@ -117,7 +119,9 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", password=" + password + ", photos=" + photos + ", enabled=" + enabled + ", roles=" + roles + "]";
+				+ ", photos=" + photos + ", enabled=" + enabled + ", roles=" + roles + "]";
 	}
+
+	
 
 }
