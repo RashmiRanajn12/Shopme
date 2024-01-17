@@ -49,7 +49,12 @@ public class UserRepoTest {
 	public void deleteUserById() {
 		userRepo.deleteById(1);
 		
-		
+		}
+	@Test
+	public void testUserByemail() {
+		String email="rashmi@gmail.com";
+		 Users user =userRepo.getUserByEmail(email);
+		 assertThat(user).isNotNull();
 	}
 
 

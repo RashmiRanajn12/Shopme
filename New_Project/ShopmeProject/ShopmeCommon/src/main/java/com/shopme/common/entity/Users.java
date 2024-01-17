@@ -25,7 +25,7 @@ public class Users {
 	private String firstName;
 	@Column(name = "last_name", length = 25, nullable = false)
 	private String lastName;
-	@Column(length = 25, nullable = false)
+	@Column(length = 100, nullable = false)
 	private String password;
 	@Column(length = 64)
 	private String photos;
