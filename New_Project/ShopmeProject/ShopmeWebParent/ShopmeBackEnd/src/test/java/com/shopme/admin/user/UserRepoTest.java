@@ -51,7 +51,7 @@ public class UserRepoTest {
 		
 		}
 	@Test
-	public void testUserByemail() {
+	public void testUserByEmail() {
 		String email="rashmi@gmail.com";
 		 Users user =userRepo.getUserByEmail(email);
 		 assertThat(user).isNotNull();

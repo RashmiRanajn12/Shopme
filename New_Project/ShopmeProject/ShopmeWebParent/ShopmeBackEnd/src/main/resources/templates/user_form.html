@@ -58,7 +58,7 @@
 	   <h2>Manage Users | Create New User</h2>
 	  
 	</div>
-	<form  th:action="@{/user/save}" method="post"  style="max-width:700px; margin:0 auto"  th:object="${user}">
+	<form  th:action="@{/user/save}" method="post"  style="max-width:700px; margin:0 auto"  th:object="${user}" onsubmit="return checkEmailUnique(this);">
 	<div class="border border-secondary rounded p-3">
 	 <div class="form-group row">
 	 <label class="col-sm-4 col-form-label">E-mail</label>
@@ -119,6 +119,16 @@ $(document).ready(function(){
 		window.location= "[[@{/users}]]"
 	});		
 });
-</script>
+		function checkEmailUnique(form){
+		url ="[[@{/users/check_email}]]";
+		userEmail=$("#email").val();
+		params ={userEmail};
+		$.post(url,params,function(response)({
+		 alert("Response from server : "+ response');
+		});
+		   return false;
+		}
+
+	</script>
 </body>
 </html>

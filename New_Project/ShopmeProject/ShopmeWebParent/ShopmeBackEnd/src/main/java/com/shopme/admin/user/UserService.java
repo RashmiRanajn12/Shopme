@@ -34,8 +34,8 @@ public class UserService {
 	  user.setPassword(encodedPassword);
   }
   public boolean isEmailUnique(String email) {
-	  Users userByemail =userRepo.getUserByEmail(email);
-	  return userByemail.equals(null);
+	  Users userByEmail =userRepo.getUserByEmail(email);
+	  return userByEmail == null;
 	  
   }
 }
